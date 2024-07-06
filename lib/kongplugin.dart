@@ -8,7 +8,7 @@
 import 'kongplugin_platform_interface.dart';
 
 class Kongplugin {
-  Future<String?> getPlatformVersion() {
-    return KongpluginPlatform.instance.getPlatformVersion();
+  String getPlatformVersion() {
+    return 'Kongplugin 1.0.0';
   }
 }
