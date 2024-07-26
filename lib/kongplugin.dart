@@ -35,6 +35,19 @@ class Kongplugin {
 
   toConnectAP() async {
     print("尝试连接WiFi");
+
+    var _isConnected = await WiFiForIoTPlugin.isConnected();
+    if (_isConnected) {
+      String? conssid = await WiFiForIoTPlugin.getBSSID();
+      if (conssid == AP_DEFAULT_SSID) {
+        return true;
+      } else {
+        bool isdisconnect = await WiFiForIoTPlugin.disconnect();
+        if (!isdisconnect) {
+          return false;
+        }
+      }
+    }
     try {
       bool connect = await WiFiForIoTPlugin.connect(AP_DEFAULT_SSID,
           password: AP_DEFAULT_PASSWORD, joinOnce: true);
