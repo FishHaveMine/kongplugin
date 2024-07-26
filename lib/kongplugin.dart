@@ -15,7 +15,7 @@ import 'kongplugin_platform_interface.dart';
 
 import 'package:wifi_iot/wifi_iot.dart';
 
-const String AP_DEFAULT_SSID = "HUAWELMK_ZT";
+const String AP_DEFAULT_SSID = "HUAWEI_MK_ZT";
 const String AP_DEFAULT_PASSWORD = "Kong2023";
 
 class Kongplugin {
