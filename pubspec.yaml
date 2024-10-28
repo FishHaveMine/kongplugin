@@ -8,8 +8,10 @@ environment:
   flutter: ">=2.5.0"
 
 dependencies:
+  crypto: ^3.0.2
   flutter:
     sdk: flutter
+  network_info_plus: ^3.0.5
   plugin_platform_interface: ^2.0.2
   udp: 5.0.3
   wifi_iot: ^0.3.19
